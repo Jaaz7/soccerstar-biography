@@ -10,6 +10,11 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>Ronaldinho's BIography</title>
 
+        <style>
+            .dropdown-menu {
+                left: calc(50% + -3.9em);
+            }
+        </style>
     </head>
 
     <body>
@@ -61,36 +66,44 @@
         </header>
 
         <!-- main part starts here-->
-        <main>
+         <main class="main main-contact">
 
-            <div class="main">
-
+            <div class="contact-box">
+    
                 <form>
-                    <label for="contact">Feedback</label>
-                    <input type="text" id="contact">
-                    <button type="submit">Send</button>
+                        <label for="contact"></label>
+                        <input type="text" id="contact" class="input-field" placeholder="   your name">
+                        <label for="email"></label>
+                        <input type="text" id="email" class="input-field" placeholder="   your email">
+                        <label for="subject"></label>
+                        <input type="text" id="subject" class="input-field" placeholder="   your subject">
+                        <textarea type="text" class=" input-textarea input-field" placeholder=" your message"></textarea>
+                        <button type="submit">Send Message</button>
                 </form>
             </div>
-
+        
         </main>
-
-        <!-- footer starts here -->
-        <footer class="footer">
-
-            <div>
-                <span class="footer-text">Copyright © 2023</span>
-            </div>
-
-            <div class="footer-icons">
-                <a href="https://www.instagram.com/ronaldinho/">
-                    <img src="assets/images/insta.png" alt="Instagram icon">
-                </a>
-
-                <a href="https://twitter.com/10Ronaldinho">
-                    <img src="assets/images/twitter.png" alt="Twitter icon">
-                </a>
-            </div>
-
-        </footer>
-    </body>
-</html>
+                <!-- footer starts here -->
+                <footer class="footer">
+        
+                    <div class="flexbox-footer">
+        
+                        <div>
+                            <span class="footer-text">Copyright © 2023</span>
+                        </div>
+        
+                        <div class="footer-icons">
+                            <a href="https://www.instagram.com/ronaldinho/" target="_blank" rel="noopener">
+                                <img src="assets/images/insta.png" alt="Instagram icon">
+                            </a>
+        
+                            <a href="https://twitter.com/10Ronaldinho" target="_blank" rel="noopener">
+                                <img src="assets/images/twitter.png" alt="Twitter icon">
+                            </a>
+                        </div>
+        
+                    </div>
+        
+                </footer>
+            </body>
+        </html>

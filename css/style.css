@@ -8,23 +8,41 @@
 }
 
 html {
-    height: 100vh;
     overflow-x: hidden;
 }
 
 body {
     background-image: url(../assets/images/background.jpg);
-    background-color: beige;
-    flex-direction: column;
-    display: flex;
-    max-width: 1440px;
+    background-color: rgb(37, 129, 63);
+    background-size: auto;
 }
 
 #fix {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 2;
+}
+
+/* making a flexbox */
+.flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flexbox-item {
+    flex: 1 1 35%;
+    margin: 20px;
+    text-align: center;
+}
+
+.flexbox-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row;
 }
 
 /* block in the header */
@@ -38,7 +56,7 @@ body {
 
 /* green block in the header */
 .inner-header {
-    width: 650px;
+    width: 450px;
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -92,7 +110,6 @@ button:hover {
 
 .main {
     width: 95%;
-    height: 50em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -104,81 +121,74 @@ button:hover {
 }
 
 .ronnie {
-    margin-left: 70px;
-    margin-top: 50px;
     width: 25em;
-    height: 34em;
+    height: 33em;
+    outline: 5px solid rgb(34, 112, 6);
+}
+
+.flexbox-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color:rgb(50, 68, 137);
+}
+
+.lil-ronnie {
+    width: 25em;
+    height: 32em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .gremio-pic {
-    margin-left: 50px;
-    margin-top: 50px;
     width: 27em;
     height: 40em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .psg-pic {
-    margin-left: 50px;
-    margin-top: 50px;
     width: 28em;
     height: 29em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .barca-pic {
-    margin-left: 35px;
-    margin-top: 50px;
     width: 30em;
     height: 37em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .milan-pic {
-    margin-left: 60px;
-    margin-top: 50px;
     width: 27em;
     height: 38em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .fla-pic {
-    margin-left: 60px;
-    margin-top: 50px;
     width: 27em;
     height: 38em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .atl-pic {
-    margin-left: 50px;
-    margin-top: 50px;
     width: 33em;
     height: 23em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .que-pic {
-    margin-left: 50px;
-    margin-top: 50px;
     width: 32em;
     height: 22em;
     outline: 5px solid rgb(34, 112, 6);
 }
 
 .index-p {
-    float: right;
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
     text-align: justify;
     color:rgb(47, 45, 38);
     font-family: impact, sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 30px;
-    min-width: 250px;
+    vertical-align: center;
 }
 
 .gremio-p {
@@ -234,50 +244,44 @@ button:hover {
 .footer {
     width: 100%;
     height: 80px;
-    display: block;
     background-color:rgb(4, 21, 46);
     position: fixed bottom;
+    bottom: 0;
     z-index: 2;
+    align-content: center;
 }
 
 .footer-text {
     color:beige;
-    position: relative;
-    left: 45%;
-    top: 40px;
-    display: flex;
 }
 
 .footer-icons {
-    float:right;
-    display: flex;
     gap: 15px;
-    margin-top: 5px;
-    margin-right: 20px;
-    position: relative;
 }
 
-/* -------------------- Making the Dropdown Menu ---------------------*/
-.dropdown {
-    position: relative;
+/* -------------------DROPDOWN MENU MEDIA QUERY FOR PC ----------------------*/
+@media(pointer: fine) {
+
+    .dropdown {
+        position: relative;
 }
 
-.dropdown-menu {
-    position: absolute;
-    top: calc(100% + 1.9em);
-    margin: -25px 0 0 -25px;
-    text-align: center;
-    border: none;
-    font-family:'Montserrat', 'sans-serif';
-    font-size: 20px;
-    font-weight: bold;
-    color:rgb(13, 46, 116);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
-    opacity: 0;
-    pointer-events: none;
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 1.9em);
+        margin: -25px 0 0 -25px;
+        text-align: center;
+        border: none;
+        font-family:'Montserrat', 'sans-serif';
+        font-size: 20px;
+        font-weight: bold;
+        color:rgb(13, 46, 116);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        opacity: 0;
+        pointer-events: none;
 }
 
-@keyframes fadein {
+    @keyframes fadein {
     0% {
         opacity: 0;
     }
@@ -286,7 +290,7 @@ button:hover {
     }
 }
 
-@keyframes movem {
+    @keyframes movem {
     0% {
         transform: translateY(-10px);
     }
@@ -295,395 +299,284 @@ button:hover {
     }
 }
 
-.dropdown > button:focus {
-    pointer-events: none;
+    .dropdown > button:focus {
+        pointer-events: none;
 }
 
-.dropdown > button:focus + .dropdown-menu {
-    pointer-events: auto;
-    cursor: pointer;
-    animation: fadein 400ms ease-out, movem 400ms ease-out;
-    animation-fill-mode: both;
+    .dropdown > button:focus + .dropdown-menu {
+        pointer-events: auto;
+        cursor: pointer;
+        animation: fadein 400ms ease-out, movem 400ms ease-out;
+        animation-fill-mode: both;
 }
 
-.dropdown-menu > p {
-    padding: 15px 30px;
-    width: 150px;
-    background-color:rgb(245, 245, 220);
+    .dropdown-menu > p {
+        padding: 15px 30px;
+        width: 150px;
+        background-color:rgb(245, 245, 220);
 }
 
-.dropdown-menu > p:hover {
-    background-color:rgb(35, 66, 133);
-    color: rgb(215, 211, 173);
+    .dropdown-menu > p:hover {
+        background-color:rgb(35, 66, 133);
+        color: rgb(215, 211, 173);
 }
 
-hr {
-    border: 0 none;
-    display:block;
-    width: 100%;               
-    background-color:#000000;
-    height: 1.5px;
-    clear: both;
+    hr {
+        border: 0 none;
+        display:block;
+        width: 100%;               
+        background-color:#000000;
+        height: 1.5px;
+        clear: both;
 }
 
-.dropdown-menu a:hover {
-    pointer-events: auto;
-    color:rgb(215, 211, 173);
+    .dropdown-menu a:hover {
+        pointer-events: auto;
+        color:rgb(215, 211, 173);
 
 }
-.dopdown-menu:hover{
-    pointer-events: auto;
+    .dropdown-menu:hover{
+        pointer-events: auto;
 }
 
-a:link, a:visited {
-    display: inline-block;
-    color: rgb(13, 46, 116);
-    font-family: inherit;
-  }
+    a:link, a:visited {
+        display: inline-block;
+        color: rgb(13, 46, 116);
+        font-family: inherit;
+}
 
-.gremio:hover > .gremio-a {
-    color: rgb(215, 211, 173);
-  }
+    .gremio:hover > .gremio-a {
+        color: rgb(215, 211, 173);
+}
 
-  .psg:hover > .psg-a {
-    color: rgb(215, 211, 173);
-  }
+    .psg:hover > .psg-a {
+        color: rgb(215, 211, 173);
+}
 
-  .barca:hover > .barca-a {
-    color: rgb(215, 211, 173);
-  }
+    .barca:hover > .barca-a {
+        color: rgb(215, 211, 173);
+}
 
-  .milan:hover > .milan-a {
-    color: rgb(215, 211, 173);
-  }
+    .milan:hover > .milan-a {
+        color: rgb(215, 211, 173);
+}
 
-  .flamengo:hover > .flamengo-a {
-    color: rgb(215, 211, 173);
-  }
+    .flamengo:hover > .flamengo-a {
+        color: rgb(215, 211, 173);
+}
 
-  .mineiro:hover > .mineiro-a {
-    color: rgb(215, 211, 173);
-  }
+    .mineiro:hover > .mineiro-a {
+        color: rgb(215, 211, 173);
+}
 
-  .queretaro:hover > .queretaro-a {
-    color: rgb(215, 211, 173);
-  }
+    .queretaro:hover > .queretaro-a {
+        color: rgb(215, 211, 173);
+}
+}
 
-@media only screen and (max-width: 768px) {
-    .inner-header {
-        width: 60%;
+/* -------------------DROPDOWN MENU MEDIA QUERY FOR TOUCHSCREENS ----------------------*/
+
+@media(pointer: coarse) {
+
+    .dropdown {
+        position: relative;
+}
+
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 1.9em);
+        margin: -25px 0 0 -25px;
+        text-align: center;
+        border: none;
+        font-family:'Montserrat', 'sans-serif';
+        font-size: 20px;
+        font-weight: bold;
+        color:rgb(13, 46, 116);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        opacity: 0;
+        pointer-events: none;
+}
+
+    @keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
-@media only screen and (max-width: 730px) {
-    .inner-header {
-        min-width: 420px;
+    @keyframes movem {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
+    .dropdown > button:focus {
+        pointer-events: none;
+}
+
+    .dropdown > button:focus + .dropdown-menu {
+        pointer-events: auto;
+        cursor: pointer;
+        animation: fadein 400ms ease-out, movem 400ms ease-out;
+        animation-fill-mode: both;
+}
+
+    .dropdown-menu > p {
+        padding: 15px 30px;
+        width: 150px;
+        background-color:rgb(245, 245, 220);
+}
+
+    .dropdown-menu > p:hover {
+        background-color:rgb(35, 66, 133);
+        color: rgb(215, 211, 173);
+}
+
+    hr {
+        border: 0 none;
+        display:block;
+        width: 100%;               
+        background-color:#000000;
+        height: 1.5px;
+        clear: both;
+}
+
+    .dropdown-menu a:hover {
+        pointer-events: auto;
+        color:rgb(215, 211, 173);
+
+}
+    .dropdown-menu:hover{
+        pointer-events: auto;
+}
+
+    a:link, a:visited {
+        display: inline-block;
+        color: rgb(13, 46, 116);
+        font-family: inherit;
+}
+
+    .gremio:hover > .gremio-a {
+        color: rgb(215, 211, 173);
+}
+
+    .psg:hover > .psg-a {
+        color: rgb(215, 211, 173);
+}
+
+    .barca:hover > .barca-a {
+        color: rgb(215, 211, 173);
+}
+
+    .milan:hover > .milan-a {
+        color: rgb(215, 211, 173);
+}
+
+    .flamengo:hover > .flamengo-a {
+        color: rgb(215, 211, 173);
+}
+
+    .mineiro:hover > .mineiro-a {
+        color: rgb(215, 211, 173);
+}
+
+    .queretaro:hover > .queretaro-a {
+        color: rgb(215, 211, 173);
+}
+}
+  /*------------------------- stylizing the form------------------------- */
+
+.main-contact {
+    height: 45em;
+}
+
+.contact-box {
+    transform: translate(23vw);
+}
+
+.input-field {
+    width: 50vw;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.input-textarea {
+    height: 200px;
+    width: 50vw;
+}
+
+.contact-box button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 48.5vw;
+    font-size: 19px;
+}
+
+/* ----------------------------------targeting phones--------------------------------------*/
 @media only screen and (max-width: 500px) {
-    .footer-text {
-        left: 15%;
-    }
-}
-
-/* --------------------managing text and image size in relation to window size  ---------------*/
-@media only screen and (max-width: 1000px) {
-
     .inner-header {
-        width: 60%;
+        width: 320px;
     }
-
-    .inner-header {
-        min-width: 320px;
-    }
-    .navigation button {
-        font-size: 14px;
-        padding: 18px 7px;
-    }
-    .main {
-        height: 50em;
-    }
-
-    .index-p {
-        min-width: 305px;
-        margin-top: -450px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
+    .header button {
+        font-size: 11px;
+        width: 90px;
     }
     .ronnie {
-        margin-left: 30%;
-        margin-right: 30%;
-        width:calc(25em * 0.6);
-        height:calc(34em * 0.6);
+        width: 17em;
+        height: 23em;
     }
-
-    .gremio-p {
-        min-width: 305px;
-        margin-top: -410px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
+    .lil-ronnie {
+        width: 17em;
+        height: 22em;
     }
-
     .gremio-pic {
-        margin-left: 30%;
-        margin-right: 30%;
-        width: calc(27em * 0.6);
-        height: calc(40em * 0.6);
-    }
-
-    .psg-p {
-        min-width: 305px;
-        margin-top: -450px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
+        width: 17em;
+        height: 25em;
     }
     
     .psg-pic {
-        margin-left: 20%;
-        margin-right: 30%;
-        width: calc(28em * 0.7);
-        height: calc(29em * 0.7);
-    }
-    
-    .barca-p {
-        min-width: 305px;
-        margin-top: -430px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
-    }
-
-    .barca-pic {
-        margin-left: 30%;
-        margin-right: 30%;
-        width: calc(30em * 0.6);
-        height: calc(37em * 0.6);
-    }
-
-    .milan-p {
-        min-width: 305px;
-        margin-top: -420px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
-    }
-    
-    .milan-pic {
-        margin-left: 30%;
-        margin-right: 30%;
-        width: calc(27em * 0.6);
-        height: calc(38em * 0.6);
-    }
-
-    .fla-p {
-        min-width: 305px;
-        margin-top: -450px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
-    }
-    
-    .fla-pic {
-        margin-left: 30%;
-        margin-right: 30%;
-        width: calc(27em * 0.6);
-        height: calc(38em * 0.6);
-    }
-
-    .atl-p {
-        min-width: 305px;
-        margin-top: -530px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
-    }
-
-    .atl-pic {
-        margin-left: 20%;
-        margin-right: 30%;
-        width: calc(33em * 0.7);
-        height: calc(23em * 0.7);
-    }
-
-    .quer-p {
-        min-width: 305px;
-        margin-top: -530px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 20px;
-        letter-spacing: 0px;
-        line-height: 23px;
-    }
-    
-    .que-pic {
-        margin-left: 20%;
-        margin-right: 30%;
-        width: calc(32em * 0.7);
-        height: calc(22em * 0.7);
-    }
-}
-
-/*--------------------------- targeting mobile phones-----------------------------*/
-@media only screen and (max-width: 412px) {
-
-    .inner-header {
-        min-width: 320px;
-    }
-    .navigation button {
-        font-size: 14px;
-        padding: 18px 7px;
-    }
-    .main {
-        height: 50em;
-    }
-    .index-p {
-        min-width: 344px;
-        margin-top: -400px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-    .ronnie {
-        margin-left: 50px;
-        margin-top: 50px;
-        width:calc(25em * 0.7);
-        height:calc(34em * 0.7);
-    }
-    
-    .gremio-pic {
-        margin-left: 60px;
-        margin-top: 50px;
-        width: calc(27em * 0.6);
-        height: calc(40em * 0.6);
-    }
-    
-    .psg-pic {
-        margin-left: 50px;
-        margin-top: 50px;
-        width: calc(28em * 0.6);
-        height: calc(29em * 0.6);
+        width: 21em;
+        height: 22em;
     }
     
     .barca-pic {
-        margin-left: 40px;
-        margin-top: 50px;
-        width: calc(30em * 0.6);
-        height: calc(37em * 0.6);
+        width: 17em;
+        height: 22em;
     }
     
     .milan-pic {
-        margin-left: 60px;
-        margin-top: 50px;
-        width: calc(27em * 0.6);
-        height: calc(38em * 0.6);
+        width: 17em;
+        height: 24em;
     }
     
     .fla-pic {
-        margin-left: 60px;
-        margin-top: 50px;
-        width: calc(27em * 0.6);
-        height: calc(38em * 0.6);
+        width: 17em;
+        height: 22em;
     }
+    
     .atl-pic {
-        margin-left: 60px;
-        margin-top: 50px;
-        width: calc(33em * 0.5);
-        height: calc(23em * 0.5);
+        width: 22em;
+        height: 15em;
     }
     
     .que-pic {
-        margin-left: 35px;
-        margin-top: 50px;
-        width: calc(32em * 0.6);
-        height: calc(22em * 0.6);
-    }
-
-    .psg-p {
-        min-width: 344px;
-        margin-top: -510px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-
-    .barca-p {
-        min-width: 344px;
-        margin-top: -430px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-
-    .milan-p {
-        min-width: 344px;
-        margin-top: -420px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-
-    .fla-p {
-        min-width: 344px;
-        margin-top: -420px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-
-    .atl-p {
-        min-width: 344px;
-        margin-top: -600px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
-    }
-    .quer-p {
-        min-width: 344px;
-        margin-top: -580px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 20px;
+        width: 22em;
+        height: 15em;
     }
 }
 
 .map {
-    width: 100%;
-    height: 300px;
+    width: 90%;
+    height: 150px;
+    margin-top: 20px;
 }
 
-.map-wrapper {
-    max-width: 400px;
-    padding-left: 550px;
+.lil-p {
+    font-size: 15px;
 }
