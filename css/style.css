@@ -62,7 +62,7 @@ body {
     margin: 0 auto;
     background-color: rgba(25, 85, 28, 0.647);
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
@@ -78,7 +78,7 @@ body {
 }
 
 .navigation a:hover {
-    color:rgb(13, 46, 116)
+    color: rgb(13, 46, 116)
 }
 
 button {
@@ -89,13 +89,13 @@ button {
     cursor: pointer;
     transition: 400ms;
     transition-property: background-color, color;
-    font-family:'Montserrat', 'sans-serif';
+    font-family: 'Montserrat', 'sans-serif';
     font-size: 20px;
     font-weight: bold;
-    color:beige;
+    color: beige;
     cursor: pointer;
     margin: 0px 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
@@ -103,7 +103,7 @@ button:hover {
     color: rgb(13, 46, 116);
 }
 
-.dropdown > button:focus {
+.dropdown>button:focus {
     background-color: rgba(245, 245, 220, 0.88);
     color: rgb(13, 46, 116);
 }
@@ -116,7 +116,7 @@ button:hover {
     margin-top: 8em;
     margin-bottom: 4em;
     background-color: rgb(246, 251, 229);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 
@@ -130,7 +130,7 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
-    color:rgb(50, 68, 137);
+    color: rgb(50, 68, 137);
 }
 
 .lil-ronnie {
@@ -183,7 +183,7 @@ button:hover {
 
 .index-p {
     text-align: justify;
-    color:rgb(47, 45, 38);
+    color: rgb(47, 45, 38);
     font-family: impact, sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
@@ -244,7 +244,7 @@ button:hover {
 .footer {
     width: 100%;
     height: 80px;
-    background-color:rgb(4, 21, 46);
+    background-color: rgb(4, 21, 46);
     position: fixed bottom;
     bottom: 0;
     z-index: 2;
@@ -252,7 +252,7 @@ button:hover {
 }
 
 .footer-text {
-    color:beige;
+    color: beige;
 }
 
 .footer-icons {
@@ -264,7 +264,7 @@ button:hover {
 
     .dropdown {
         position: relative;
-}
+    }
 
     .dropdown-menu {
         position: absolute;
@@ -272,106 +272,110 @@ button:hover {
         margin: -25px 0 0 -25px;
         text-align: center;
         border: none;
-        font-family:'Montserrat', 'sans-serif';
+        font-family: 'Montserrat', 'sans-serif';
         font-size: 20px;
         font-weight: bold;
-        color:rgb(13, 46, 116);
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        color: rgb(13, 46, 116);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
         opacity: 0;
         pointer-events: none;
-}
+    }
 
     @keyframes fadein {
-    0% {
-        opacity: 0;
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
-    }
-}
 
     @keyframes movem {
-    0% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+        0% {
+            transform: translateY(-10px);
+        }
 
-    .dropdown > button:focus {
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .dropdown>button:focus {
         pointer-events: none;
-}
+    }
 
-    .dropdown > button:focus + .dropdown-menu {
+    .dropdown>button:focus+.dropdown-menu {
         pointer-events: auto;
         cursor: pointer;
         animation: fadein 400ms ease-out, movem 400ms ease-out;
         animation-fill-mode: both;
-}
+    }
 
-    .dropdown-menu > p {
+    .dropdown-menu>p {
         padding: 15px 30px;
         width: 150px;
-        background-color:rgb(245, 245, 220);
-}
+        background-color: rgb(245, 245, 220);
+    }
 
-    .dropdown-menu > p:hover {
-        background-color:rgb(35, 66, 133);
+    .dropdown-menu>p:hover {
+        background-color: rgb(35, 66, 133);
         color: rgb(215, 211, 173);
-}
+    }
 
     hr {
         border: 0 none;
-        display:block;
-        width: 100%;               
-        background-color:#000000;
+        display: block;
+        width: 100%;
+        background-color: #000000;
         height: 1.5px;
         clear: both;
-}
+    }
 
     .dropdown-menu a:hover {
         pointer-events: auto;
-        color:rgb(215, 211, 173);
+        color: rgb(215, 211, 173);
 
-}
-    .dropdown-menu:hover{
+    }
+
+    .dropdown-menu:hover {
         pointer-events: auto;
-}
+    }
 
-    a:link, a:visited {
+    a:link,
+    a:visited {
         display: inline-block;
         color: rgb(13, 46, 116);
         font-family: inherit;
-}
+    }
 
-    .gremio:hover > .gremio-a {
+    .gremio:hover>.gremio-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .psg:hover > .psg-a {
+    .psg:hover>.psg-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .barca:hover > .barca-a {
+    .barca:hover>.barca-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .milan:hover > .milan-a {
+    .milan:hover>.milan-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .flamengo:hover > .flamengo-a {
+    .flamengo:hover>.flamengo-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .mineiro:hover > .mineiro-a {
+    .mineiro:hover>.mineiro-a {
         color: rgb(215, 211, 173);
-}
+    }
 
-    .queretaro:hover > .queretaro-a {
+    .queretaro:hover>.queretaro-a {
         color: rgb(215, 211, 173);
-}
+    }
 }
 
 /* -------------------DROPDOWN MENU MEDIA QUERY FOR TOUCHSCREENS ----------------------*/
@@ -380,7 +384,7 @@ button:hover {
 
     .dropdown {
         position: relative;
-}
+    }
 
     .dropdown-menu {
         position: absolute;
@@ -388,108 +392,113 @@ button:hover {
         margin: -25px 0 0 -25px;
         text-align: center;
         border: none;
-        font-family:'Montserrat', 'sans-serif';
+        font-family: 'Montserrat', 'sans-serif';
         font-size: 20px;
         font-weight: bold;
-        color:rgb(13, 46, 116);
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        color: rgb(13, 46, 116);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
         opacity: 0;
-        pointer-events: none;
-}
+        /* pointer-events: none; */
+    }
 
     @keyframes fadein {
-    0% {
-        opacity: 0;
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
-    }
-}
 
     @keyframes movem {
-    0% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+        0% {
+            transform: translateY(-10px);
+        }
 
-    .dropdown > button:focus {
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .dropdown>button:focus {
         pointer-events: none;
-}
+    }
 
-    .dropdown > button:focus + .dropdown-menu {
+    .dropdown>button:focus+.dropdown-menu {
         pointer-events: auto;
         cursor: pointer;
         animation: fadein 400ms ease-out, movem 400ms ease-out;
         animation-fill-mode: both;
-}
+    }
 
-    .dropdown-menu > p {
+    .dropdown-menu>p {
         padding: 15px 30px;
         width: 150px;
-        background-color:rgb(245, 245, 220);
-}
+        background-color: rgb(245, 245, 220);
+    }
 
-    .dropdown-menu > p:hover {
-        background-color:rgb(35, 66, 133);
+    .dropdown-menu>p:hover {
+        background-color: rgb(35, 66, 133);
         color: rgb(215, 211, 173);
-}
+    }
 
     hr {
         border: 0 none;
-        display:block;
-        width: 100%;               
-        background-color:#000000;
+        display: block;
+        width: 100%;
+        background-color: #000000;
         height: 1.5px;
         clear: both;
-}
+    }
 
     .dropdown-menu a:hover {
         pointer-events: auto;
-        color:rgb(215, 211, 173);
+        color: rgb(215, 211, 173);
 
-}
-    .dropdown-menu:hover{
+    }
+
+    .dropdown-menu:hover {
         pointer-events: auto;
-}
+    }
 
-    a:link, a:visited {
+    a:link,
+    a:visited {
         display: inline-block;
         color: rgb(13, 46, 116);
         font-family: inherit;
+    }
+
+    .gremio:hover>.gremio-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .psg:hover>.psg-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .barca:hover>.barca-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .milan:hover>.milan-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .flamengo:hover>.flamengo-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .mineiro:hover>.mineiro-a {
+        color: rgb(215, 211, 173);
+    }
+
+    .queretaro:hover>.queretaro-a {
+        color: rgb(215, 211, 173);
+    }
 }
 
-    .gremio:hover > .gremio-a {
-        color: rgb(215, 211, 173);
-}
-
-    .psg:hover > .psg-a {
-        color: rgb(215, 211, 173);
-}
-
-    .barca:hover > .barca-a {
-        color: rgb(215, 211, 173);
-}
-
-    .milan:hover > .milan-a {
-        color: rgb(215, 211, 173);
-}
-
-    .flamengo:hover > .flamengo-a {
-        color: rgb(215, 211, 173);
-}
-
-    .mineiro:hover > .mineiro-a {
-        color: rgb(215, 211, 173);
-}
-
-    .queretaro:hover > .queretaro-a {
-        color: rgb(215, 211, 173);
-}
-}
-  /*------------------------- stylizing the form------------------------- */
+/*------------------------- stylizing the form------------------------- */
 
 .main-contact {
     height: 45em;
@@ -523,48 +532,52 @@ button:hover {
     .inner-header {
         width: 320px;
     }
+
     .header button {
         font-size: 11px;
         width: 90px;
     }
+
     .ronnie {
         width: 17em;
         height: 23em;
     }
+
     .lil-ronnie {
         width: 17em;
         height: 22em;
     }
+
     .gremio-pic {
         width: 17em;
         height: 25em;
     }
-    
+
     .psg-pic {
         width: 21em;
         height: 22em;
     }
-    
+
     .barca-pic {
         width: 17em;
         height: 22em;
     }
-    
+
     .milan-pic {
         width: 17em;
         height: 24em;
     }
-    
+
     .fla-pic {
         width: 17em;
         height: 22em;
     }
-    
+
     .atl-pic {
         width: 22em;
         height: 15em;
     }
-    
+
     .que-pic {
         width: 22em;
         height: 15em;
