@@ -17,6 +17,7 @@ body {
     background-image: url(../assets/images/background.jpg);
     background-color: rgb(37, 129, 63);
     background-size: auto;
+    min-height: 100vh;
 
 }
 
@@ -87,7 +88,7 @@ button:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* -------------------------MAIN-------------------------------------------------- */
@@ -192,53 +193,17 @@ button:hover {
     font-size: 15px;
 }
 
-.gremio-p {
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
-    min-width: 250px;
+.correct {
+    width: 15em;
+    height: 15em;
+    outline: 5px solid rgb(34, 112, 6);
 }
 
-.psg-p {
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
-    min-width: 250px;
-}
-
-.barca-p {
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
-    min-width: 250px;
-}
-
-.milan-p {
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
-    min-width: 250px;
-}
-
-.fla-p {
-    margin-top: -750px;
-    margin-left: 580px;
-    margin-right: 100px;
-    min-width: 250px;
-}
-
-.atl-p {
-    margin-left: 650px;
-    margin-top: -800px;
-    margin-right: 100px;
-    min-width: 250px;
-}
-
-.quer-p {
-    margin-left: 650px;
-    margin-top: -800px;
-    margin-right: 100px;
-    min-width: 250px;
+.thanks {
+    color: rgb(18, 42, 75);
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* -------------------DROPDOWN MENU MEDIA QUERY FOR PC ----------------------*/
@@ -379,27 +344,7 @@ button:hover {
         font-weight: bold;
         color: rgb(13, 46, 116);
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-    }
-
-    @keyframes fadein {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes movem {
-        0% {
-            transform: translateY(-10px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
+        visibility: hidden;
     }
 
     .dropdown>button:focus {
@@ -407,21 +352,14 @@ button:hover {
     }
 
     .dropdown>button:focus+.dropdown-menu {
-        pointer-events: auto;
         cursor: pointer;
-        animation: fadein 400ms ease-out, movem 400ms ease-out;
-        animation-fill-mode: both;
+        visibility: visible;
     }
 
     .dropdown-menu>p {
         padding: 15px 30px;
         width: 150px;
         background-color: rgb(245, 245, 220);
-    }
-
-    .dropdown-menu>p:hover {
-        background-color: rgb(35, 66, 133);
-        color: rgb(215, 211, 173);
     }
 
     hr {
@@ -433,49 +371,11 @@ button:hover {
         clear: both;
     }
 
-    .dropdown-menu a:hover {
-        pointer-events: auto;
-        color: rgb(215, 211, 173);
-
-    }
-
-    .dropdown-menu:hover {
-        pointer-events: auto;
-    }
-
     a:link,
     a:visited {
         display: inline-block;
         color: rgb(13, 46, 116);
         font-family: inherit;
-    }
-
-    .gremio:hover>.gremio-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .psg:hover>.psg-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .barca:hover>.barca-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .milan:hover>.milan-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .flamengo:hover>.flamengo-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .mineiro:hover>.mineiro-a {
-        color: rgb(215, 211, 173);
-    }
-
-    .queretaro:hover>.queretaro-a {
-        color: rgb(215, 211, 173);
     }
 }
 
@@ -524,8 +424,11 @@ button:hover {
     width: 100%;
     height: 80px;
     background-color: rgb(4, 21, 46);
-    /* position: fixed bottom;
-    bottom: 0; */
+    position: sticky;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flexbox-footer {
@@ -534,6 +437,7 @@ button:hover {
     align-items: center;
     gap: 40px;
     flex-direction: row;
+    
 }
 
 .footer-text {
