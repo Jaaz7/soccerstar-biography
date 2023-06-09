@@ -66,20 +66,25 @@
         </header>
 
         <!-- main part starts here-->
-         <main class="main main-contact">
+         <main class="main main-contact flexbox-container">
 
-            <div class="contact-box">
+            <div class="contact-box flexbox-item">
     
-                <form>
-                        <label for="contact"></label>
-                        <input type="text" id="contact" class="input-field" placeholder="   your name">
-                        <label for="email"></label>
-                        <input type="text" id="email" class="input-field" placeholder="   your email">
-                        <label for="subject"></label>
-                        <input type="text" id="subject" class="input-field" placeholder="   your subject">
-                        <textarea type="text" class=" input-textarea input-field" placeholder=" your message"></textarea>
-                        <button type="submit">Send Message</button>
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend><h1>Contact form for business enquiries</h1></legend><br>
+                        <label for="contact">Name*</label><br>
+                        <input type="text" id="contact" required class="input-field" placeholder="   your name"><br><br>
+                        <label for="email">Email*</label><br>
+                        <input type="email" id="email" required class="input-field" placeholder="   your email"><br><br>
+                        <label for="subject">Subject</label><br>
+                        <input type="text" id="subject" required class="input-field" placeholder="   your subject"><br>
+                        <textarea type="text" class="input-textarea input-field" placeholder=" your message"></textarea><br><br>
+                        <input type="submit" value="Send" class="input-button">
+                        <input type="reset" class="input-button">
+                    </fieldset>
                 </form>
+
             </div>
         
         </main>

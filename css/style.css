@@ -17,9 +17,7 @@ body {
     background-image: url(../assets/images/background.jpg);
     background-color: rgb(37, 129, 63);
     background-size: auto;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+
 }
 
 /* ----------------------------HEADER--------------------------------- */
@@ -484,12 +482,11 @@ button:hover {
 /*------------------------- stylizing the form---------------------------- */
 
 .main-contact {
-    height: 45em;
+    height: 100%;
 }
 
 .contact-box {
-    margin-left: 60px;
-    padding-top: 50px;
+    padding: 30px;
 }
 
 .input-field {
@@ -504,7 +501,7 @@ button:hover {
     width: 50vw;
 }
 
-.contact-box button {
+.contact-box .input-button {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 48.5vw;
