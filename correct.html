@@ -1,102 +1,135 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ronaldinho's Biography">
-        <meta name="keywords" content="football, soccer, ronaldinho">
-        <meta name="author" content="Jaaziel do Vale"> 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <title>Ronaldinho's Biography</title>
+<head>
 
-        <style>
-            .dropdown-menu {
-                left: calc(50% + -3.9em);
-            }
-        </style>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ronaldinho's Biography">
+    <meta name="keywords" content="football, soccer, ronaldinho">
+    <meta name="author" content="Jaaziel do Vale">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Ronaldinho's Biography</title>
 
-    <body>
+    <style>
+        .dropdown-menu {
+            left: calc(50% + -3.9em);
+        }
 
-        <!-- header with the two buttons and dropdown menu-->
-        <header id="fix">
-            <div class="header">
-                <div class="inner-header">
-                    <div>
-                        <ul class="navigation">
+        .dropdown-menu-touch {
+            left: calc(50% + -3.9em);
+        }
+    </style>
+</head>
 
-                            <li>
-                                <form action="index.html">
-                                    <button type="submit">
-                                        HOME
-                                    </button>
-                                </form>
-                            </li>
+<body>
 
-                            <li>
-                                <div class="dropdown">
-                                    <button>CLUBS</button>
-                                    <div class="dropdown-menu">
-                                        
-                                        <p class="gremio"><a class="gremio-a" href="./gremio.html">GRÊMIO</a></p><hr>
-                                        <p class="psg"><a class="psg-a" href="psg.html">PSG</a></p><hr>
-                                        <p class="barca"><a class="barca-a" href="barcelona.html">BARCELONA</a></p><hr>
-                                        <p class="milan"><a class="milan-a" href="milan.html">MILAN</a></p><hr>
-                                        <p class="flamengo"><a class="flamengo-a" href="flamengo.html">FLAMENGO</a></p><hr>
-                                        <p class="mineiro"><a class="mineiro-a" href="mineiro.html">ATL. MINEIRO</a></p><hr>
-                                        <p class="queretaro"><a class="queretaro-a" href="queretaro.html">QUERÉTARO</a></p>
-                                    
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <form action="contact.html">
-                                    <button type="submit">
-                                        CONTACT
-                                    </button>
-                                </form>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- main part starts here-->
-        <main class="main">
-            <div class="flexbox-container">
-
-                <div class="flexbox-item">
-                    <img src="assets/images/correct.png" alt="Successful form submission image." class="correct">
-                    <p class="thanks"><br>Thank You!<br>Your submission has been sent.</p>
-                </div>
-            </div>
-
-        </main>
-        <!-- footer starts here -->
-        <footer class="footer">
-
-            <div class="flexbox-footer main-contact">
-
+    <!-- header with the two buttons and dropdown menu-->
+    <header id="fix">
+        <div class="header">
+            <div class="inner-header">
                 <div>
-                    <span class="footer-text">Copyright © 2023</span>
+                    <ul class="navigation">
+
+                        <li>
+                            <form action="index.html">
+                                <button type="submit">
+                                    HOME
+                                </button>
+                            </form>
+                        </li>
+
+                        <li>
+                            <div class="dropdown">
+                                <button>CLUBS</button>
+                                <div class="dropdown-menu">
+
+                                    <p class="gremio"><a class="gremio-a" href="./gremio.html">GRÊMIO</a></p>
+                                    <hr>
+                                    <p class="psg"><a class="psg-a" href="psg.html">PSG</a></p>
+                                    <hr>
+                                    <p class="barca"><a class="barca-a" href="barcelona.html">BARCELONA</a></p>
+                                    <hr>
+                                    <p class="milan"><a class="milan-a" href="milan.html">MILAN</a></p>
+                                    <hr>
+                                    <p class="flamengo"><a class="flamengo-a" href="flamengo.html">FLAMENGO</a></p>
+                                    <hr>
+                                    <p class="mineiro"><a class="mineiro-a" href="mineiro.html">ATL. MINEIRO</a></p>
+                                    <hr>
+                                    <p class="queretaro"><a class="queretaro-a" href="queretaro.html">QUERÉTARO</a></p>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown-touch">
+                                <label for="clubs" id="toggle-menu" class="clubs">CLUBS</label>
+                                <input type="checkbox" id="clubs">
+                                <div class="dropdown-menu-touch">
+
+                                    <p class="gremio"><a class="gremio-a" href="./gremio.html">GRÊMIO</a></p>
+                                    <hr>
+                                    <p class="psg"><a class="psg-a" href="psg.html">PSG</a></p>
+                                    <hr>
+                                    <p class="barca"><a class="barca-a" href="barcelona.html">BARCELONA</a></p>
+                                    <hr>
+                                    <p class="milan"><a class="milan-a" href="milan.html">MILAN</a></p>
+                                    <hr>
+                                    <p class="flamengo"><a class="flamengo-a" href="flamengo.html">FLAMENGO</a></p>
+                                    <hr>
+                                    <p class="mineiro"><a class="mineiro-a" href="mineiro.html">ATL. MINEIRO</a></p>
+                                    <hr>
+                                    <p class="queretaro"><a class="queretaro-a" href="queretaro.html">QUERÉTARO</a></p>
+
+                                </div>
+                        </li>
+
+                        <li>
+                            <form action="contact.html">
+                                <button type="submit">
+                                    CONTACT
+                                </button>
+                            </form>
+                        </li>
+
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </header>
 
-                <div class="footer-icons">
-                    <a href="https://www.instagram.com/ronaldinho/" target="_blank" rel="noopener">
-                        <img src="assets/images/insta.png" alt="Instagram icon">
-                    </a>
+    <!-- main part starts here-->
+    <main class="main">
+        <div class="flexbox-container">
 
-                    <a href="https://twitter.com/10Ronaldinho" target="_blank" rel="noopener">
-                        <img src="assets/images/twitter.png" alt="Twitter icon">
-                    </a>
-                </div>
+            <div class="flexbox-item">
+                <img src="assets/images/correct.png" alt="Successful form submission image." class="correct">
+                <p class="thanks"><br>Thank You!<br>Your submission has been sent.</p>
+            </div>
+        </div>
 
+    </main>
+    <!-- footer starts here -->
+    <footer class="footer">
+
+        <div class="flexbox-footer main-contact">
+
+            <div>
+                <span class="footer-text">Copyright © 2023</span>
             </div>
 
-        </footer>
-    </body>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/ronaldinho/" target="_blank" rel="noopener">
+                    <img src="assets/images/insta.png" alt="Instagram icon">
+                </a>
+
+                <a href="https://twitter.com/10Ronaldinho" target="_blank" rel="noopener">
+                    <img src="assets/images/twitter.png" alt="Twitter icon">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
 </html>

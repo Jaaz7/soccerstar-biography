@@ -228,6 +228,14 @@ button:hover {
         pointer-events: none;
     }
 
+    .dropdown-touch {
+        display: none;
+    }
+
+    .dropdown-menu-touch {
+        display: none;
+    }
+
     @keyframes fadein {
         0% {
             opacity: 0;
@@ -330,10 +338,35 @@ button:hover {
 @media(pointer: coarse) {
 
     .dropdown {
-        position: relative;
+        display: none;
     }
 
     .dropdown-menu {
+        display: none;
+    }
+
+    .clubs {
+    padding: 15px 10px;
+    background-color: rgba(13, 46, 116, 0.907);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 400ms;
+    transition-property: background-color, color;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 20px;
+    font-weight: bold;
+    color: beige;
+    cursor: pointer;
+    margin: 0px 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-touch {
+        position: relative;
+    }
+
+    .dropdown-menu-touch {
         position: absolute;
         top: calc(100% + 1.9em);
         margin: -25px 0 0 -25px;
@@ -344,19 +377,15 @@ button:hover {
         font-weight: bold;
         color: rgb(13, 46, 116);
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-        visibility: hidden;
+        display: none;
+        transform: translateY(15px);
     }
 
-    .dropdown>button:focus {
-        pointer-events: none;
+    .dropdown-touch>input[type="checkbox"]:checked+.dropdown-menu-touch {
+        display: block;
     }
 
-    .dropdown>button:focus+.dropdown-menu {
-        cursor: pointer;
-        visibility: visible;
-    }
-
-    .dropdown-menu>p {
+    .dropdown-menu-touch>p {
         padding: 15px 30px;
         width: 150px;
         background-color: rgb(245, 245, 220);
@@ -376,6 +405,11 @@ button:hover {
         display: inline-block;
         color: rgb(13, 46, 116);
         font-family: inherit;
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+        margin-right: -40px;
     }
 }
 
@@ -457,6 +491,10 @@ button:hover {
     .header button {
         font-size: 11px;
         width: 90px;
+    }
+
+    .clubs {
+        font-size: 11px;
     }
 
     .ronnie {
