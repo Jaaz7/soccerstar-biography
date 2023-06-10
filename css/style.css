@@ -346,17 +346,17 @@ button:hover {
     }
 
     .clubs {
-    padding: 15px 10px;
-    background-color: rgba(13, 46, 116, 0.907);
-    border: none;
-    border-radius: 10px;
-    font-family: 'Montserrat', 'sans-serif';
-    font-size: 20px;
-    font-weight: bold;
-    color: beige;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    transform: translateY(-50%, -50%);
-    cursor: pointer;
+        padding: 15px 10px;
+        background-color: rgba(13, 46, 116, 0.907);
+        border: none;
+        border-radius: 10px;
+        font-family: 'Montserrat', 'sans-serif';
+        font-size: 20px;
+        font-weight: bold;
+        color: beige;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        transform: translateY(-50%, -50%);
+        cursor: pointer;
     }
 
     .dropdown-touch {
@@ -539,5 +539,9 @@ button:hover {
     .que-pic {
         width: 18em;
         height: 12em;
+    }
+
+    .flexbox-container h1 {
+        font-size: 23px;
     }
 }
