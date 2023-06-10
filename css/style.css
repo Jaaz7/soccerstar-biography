@@ -409,7 +409,8 @@ button:hover {
 
     input[type="checkbox"] {
         opacity: 0;
-        margin-right: -30px;
+        width: 1px;
+        height: 1px;
     }
 }
 
