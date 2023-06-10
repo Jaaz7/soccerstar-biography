@@ -261,7 +261,7 @@ button:hover {
     }
 
     .dropdown>button:focus+.dropdown-menu {
-        pointer-events: auto;
+        pointer-events: visible;
         cursor: pointer;
         animation: fadein 400ms ease-out, movem 400ms ease-out;
         animation-fill-mode: both;
@@ -288,13 +288,13 @@ button:hover {
     }
 
     .dropdown-menu a:hover {
-        pointer-events: auto;
+        pointer-events: visible;
         color: rgb(215, 211, 173);
 
     }
 
     .dropdown-menu:hover {
-        pointer-events: auto;
+        pointer-events: visible;
     }
 
     a:link,
@@ -425,7 +425,7 @@ button:hover {
 .input-field {
     width: 50vw;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 5px;
 }
 
