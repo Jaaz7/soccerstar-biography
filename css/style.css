@@ -409,7 +409,7 @@ button:hover {
 
     input[type="checkbox"] {
         opacity: 0;
-        margin-right: -10px;
+        /* margin-right: -10px; */
     }
 }
 
