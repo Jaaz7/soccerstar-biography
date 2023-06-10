@@ -512,8 +512,8 @@ button:hover {
     }
 
     .psg-pic {
-        width: 21em;
-        height: 22em;
+        width: 19em;
+        height: 20em;
     }
 
     .barca-pic {
@@ -532,12 +532,12 @@ button:hover {
     }
 
     .atl-pic {
-        width: 20em;
+        width: 18em;
         height: 13em;
     }
 
     .que-pic {
-        width: 20em;
-        height: 13em;
+        width: 18em;
+        height: 12em;
     }
 }
